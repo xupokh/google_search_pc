@@ -14,12 +14,11 @@
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 800px) {
 
     .searchBar {
       max-width: 90%;
       max-height: 10%;
-
     }
 }
 
@@ -49,10 +48,6 @@
   padding: 0;
 }
 
-img {
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
 
 section {
   position: relative;
