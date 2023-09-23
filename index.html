@@ -42,9 +42,11 @@
     <div class="spaceLogoTop"> 
 
         <div class="logo">
-          <div>
-           <img alt="Google" src="./icons/google.png">
-          </div>
+            <picture>
+              <source media="(max-width: 799px)" srcset="./icons/google_mini.png">
+              <source media="(min-width: 800px)" srcset="./icons/google.png">
+              <img src="./icons/google.png">
+             </picture>
         </div>
      
       </div>   
@@ -52,16 +54,23 @@
         <div class="searchPanel">
         <div class="searchBar">
 
-            <div><a href="#"> <img class="searchBarIcon" src="./icons/search.svg" title="Search"></a></div>
+            <div style="display: flex; flex-direction: row; align-items: center;">
 
-          <input class="searchInput" type="text" title="Search">
+              <a href="#"> <img class="searchIcon search"  src="./icons/search.svg" title="Search"></a>
 
-          <div><a href="#"> <img class="searchBarIcon" src="./icons/keyboard.png" title="Keyboard"></a></div>
+              <input class="searchInput" type="text" title="Search">
+
+            </div>
+
+            <div style="display: flex; flex-direction: row;">
+
+             <div><a href="#"> <img class="searchIcon search"  src="./icons/keyboard.png" title="Keyboard"></a></div>
         
-          <div> <a href="#"> <img class="searchBarIcon" src="./icons/mic.png" title="Search by Voice"></a></div>
+             <div> <a href="#"> <img class="searchIcon" src="./icons/mic.png" title="Search by Voice"></a></div>
           
-            <div> <a href="#"> <img class="searchBarIcon" src="./icons/photo.svg" title="Search by Photo"></a></div>
+             <div> <a href="#"> <img class="searchIcon" src="./icons/photo.svg" title="Search by Photo"></a></div>
 
+            </div>
         </div>
 
           <div class="buttons">
