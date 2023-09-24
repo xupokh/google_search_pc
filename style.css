@@ -5,11 +5,15 @@
     scroll-behavior: smooth;
   }
 }
-@media (max-width: 3000px) { 
+@media (min-width: 800px) { 
 
     section .header {   
       height: 60px;
       padding: 6px;
+    }
+
+    .logo img{
+      width: 100%;
     }
       .searchBar {
       max-width: 582px;
@@ -23,12 +27,14 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 699px) {
   section .header {   
     height: 5%;
     padding: 1px;
   }
-
+  .logo img{
+    width: 40vw;
+  }
     .searchBar {
       margin: 0;
       padding: 5px 8px 0 5px;
@@ -44,9 +50,9 @@
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 0.1ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.1ms !important;
     scroll-behavior: auto !important;
     -webkit-box-align: center;
     -webkit-box-flex: 0;
@@ -237,7 +243,9 @@ a:hover {
   margin-bottom: 8px;
   font-size:16px;
   outline: none;
-  border-radius: 22px;
+  overflow-x: hidden;
+  width: 150px;
+  flex: 100%;
 }
 .searchIcon{
   padding: 0px 8px;
