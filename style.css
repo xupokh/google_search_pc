@@ -27,7 +27,7 @@
 }
 
 
-@media (max-width: 699px) {
+@media (max-width: 799px) {
   section .header {   
     height: 5%;
     padding: 1px;
@@ -37,7 +37,7 @@
   }
     .searchBar {
       margin: 0;
-      padding: 5px 8px 0 5px;
+      padding: 5px 8px 0 14px;
       max-width: 100%;
     }
     .bottomBar a{ 
@@ -50,10 +50,17 @@
   *,
   *::before,
   *::after {
-    animation-duration: 0.1ms !important;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    scroll-behavior: auto !important; 
+    /* animation-duration: 0.1ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.1ms !important;
-    scroll-behavior: auto !important;
+*/
     -webkit-box-align: center;
     -webkit-box-flex: 0;
   }
@@ -71,7 +78,10 @@
   flex-shrink: 0;
   margin: 0;
   padding: 0;
+
 }
+
+
 
 
 section {
@@ -83,7 +93,15 @@ section {
   font-size: 14px;
   font-family: arial,sans-serif;
   color: #202124;
+  animation: anim 2s;
+  animation-duration: 3s;
+
 }
+
+@keyframes anim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+  }
 
 section .header {
   display: flex;
@@ -117,11 +135,6 @@ section .buttons{
   justify-content:left;
 }
 
-/* section .buttons div:first-child {
-  margin: 0px;
-}
-
- */
 
 .first {
   height: 42px; 
@@ -240,12 +253,13 @@ a:hover {
   height:27px;
   border:none;
   flex-wrap: wrap;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   font-size:16px;
   outline: none;
   overflow-x: hidden;
-  width: 150px;
+  width: 100%;
   flex: 100%;
+  color: rgba(0,0,0,.87);
 }
 .searchIcon{
   padding: 0px 8px;
