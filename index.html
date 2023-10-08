@@ -11,105 +11,477 @@
 </head>
 
 <body>
-  
-  <section class="hero">
 
+  <!-- Section Google Search Main Page -->
+  <section class="google flex column visible">
     <div class="header">
+      <div class="header__menu flex center">
+        <div class="menu__items">
 
-      <div class="menu">
+          <div>
+            <a href="#">Почта</a>
+          </div>
 
-        <div class="links">
+          <div>
+            <a href="#">Картинки</a>
+          </div>
 
-          <div><a href="#gmail">Почта</a></div>
+        </div>
+        <div class="menu__buttons flex">
 
-          <div><a href="#images">Картинки</a></div>
+          <div>
+            <a>
+              <img class="apps" src="./icons/google-icons/app.svg" title="Google apps">
+            </a>
+          </div>
 
-         </div>
+          <div>
+            <button class="sign" type="button">Войти</button>
+          </div>
 
-         
-        <div class="buttons">
+        </div>
+      </div>
+    </div>
 
-          <div class="first"><a  href="#grid"><img class="apps" src="./icons/app.svg" title="Google apps"></a></div>
-         
-          <div><button class="signbutton" type="button">Войти</button></div>
+    <div class="logo-panel flex column">
+      <div class="center flex"></div>
+      <div class="center flex">
+        <img src="./icons/google-icons/google.png">
+      </div>
+    </div>
 
+    <div class="search-panel">
+      <div class="search-bar flex center">
+
+        <div class="flex row-center">
+          <a href="#">
+            <img class="search-icon search-icon__svg" src="./icons/google-icons/search.svg" title="Search">
+          </a>
+          <input class="search-input" type="text" title="Search" value="" autofocus>
+        </div>
+
+        <div class="flex row-center">
+          <div>
+            <a href="#">
+              <img class="search-icon search-icon__svg" src="./icons/google-icons/keyboard.png" title="Keyboard">
+            </a>
+          </div>
+          <div>
+            <a href="#"> <img class="search-icon" src="./icons/google-icons/mic.png" title="Search by Voice">
+            </a>
+          </div>
+          <div>
+            <a href="#"> <img class="search-icon" src="./icons/google-icons/photo.svg" title="Search by Photo">
+            </a>
+          </div>
+        </div>
       </div>
 
+      <div class="search-panel__buttons flex center">
+        <button class="search-panel__button" type="button" onclick="scrollPage('.search-result', '.google')">Поиск в
+          Google</button>
+        <button class="search-panel__button" type="button" onclick="scrollPage('.search-result', '.google')">Мне
+          повезёт!</button>
+      </div>
+    </div>
+
+    <div class="bottom-space"></div>
+
+    <div class="bottom-bar flex">
+      <a>Россия, Санкт-Петербург</a>
+    </div>
+    <div class="bottom-bar flex">
+      <div class="bottom-links flex">
+        <a>Всё о Google</a>
+        <a>Реклама</a>
+        <a>Для бизнеса</a>
+        <a>Как работает Google Поиск</a>
+      </div>
+      <div class="bottom-links flex">
+        <a> <img src="./icons/google-icons/leaf.png"> Наше третье десятилетие борьбы c незаконным копированием кода</a>
+      </div>
+      <div class="bottom-links flex">
+        <a>Конфиденциальность</a>
+        <a>Условия</a>
+        <a>Настройки</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Search Links Result -->
+  <section class="search-result flex column hidden">
+
+    <div class="search-panel flex row">
+      <div class="search-panel__logo">
+        <img src="./icons/google-icons/google_mini.png">
+      </div>
+
+      <div class="search-bar flex center">
+        <div class="flex row">
+          <input class="search-input" type="text" title="Search" value="" autofocus>
+        </div>
+        <div class="flex row">
+          <div><a href="#"> <img class="search-icon search-icon__svg" src="./icons/google-icons/keyboard.png"
+                title="Keyboard"></a>
+          </div>
+          <div> <a href="#"> <img class="search-icon" src="./icons/google-icons/mic.png" title="Search by Voice"></a>
+          </div>
+          <div> <a href="#"> <img class="search-icon search-icon__svg" src="./icons/google-icons/search.svg"
+                title="Search"></a></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tags flex">
+      <div class="tag flex center" onClick="changeResumeBlock(0)"><span>О себе</span></div>
+      <div class="tag flex center" onClick="changeResumeBlock(1)"><span>Образование</span></div>
+      <div class="tag flex center" onClick="changeResumeBlock(2)"><span>Инженер</span></div>
+      <div class="tag flex center" onClick="changeResumeBlock(4)"><span>Техподдержка</span></div>
+      <div class="tag flex center" onClick="changeResumeBlock(3)"><span>Графический дизайн</span></div>
+      <div class="tag flex center" onClick="changeResumeBlock(5)"><span>Навыки</span></div>
+      <div class="tag flex center"
+        onClick="scrollPage('.contacts', '.search-icon'), highlight('.contacts'), simulateClick()">
+        <span>Контакты</span>
+      </div>
+    </div>
+
+    <div class="links_wrapper flex">
+
+
+
+      <div class="links-search-result flex column">
+
+        <div class="links-search__time-result">
+          <span> Результатов: примерно много (0,23 сек.) </span>
+        </div>
+
+        <div class="links-search__prompt-result">
+          <span>Возможно, Вы ищете: <b><i> сотрудник года</i></b> </span>
+        </div>
+
+        <div class="link">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/wikipedia.ico"></div>
+            <div>
+              <div class="addressName">Соискатель</div>
+              <div class="adress">https://ru.wikipedia.org/</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a onClick="changeResumeBlock(0), event.stopPropagation()">Походяева Ксения Александровна</a>
+            </h3>
+          </div>
+          <div class="description about ">
+            Учусь и работаю. В поиске удаленной работы, на полный день / подработку.
+            <div>Прохожу курсы backend + frontend (Node.js)</div>
+          </div>
+        </div>
+
+        <div class="link">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/itmo.ico"></div>
+            <div>
+              <div class="addressName">Университет ИТМО</div>
+              <div class="adress">https://itmo.ru/</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a onClick="changeResumeBlock(1), event.stopPropagation()">Университет ИТМО</a>
+            </h3>
+          </div>
+          <div class="description education">
+            Университет ИТМО —
+            российское федеральное государственное автономное учебное заведение высшего и послевузовского образования,
+            с 2009 года — национальный исследовательский университет (НИУ). Основан в 1900 году в Санкт-Петербурге.
+          </div>
+        </div>
+
+        <div class="link">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/yamal-media.ico"></div>
+            <div>
+              <div class="addressName">Медиахолдинг</div>
+              <div class="adress">https://yamal-media.ru/info</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a onClick="changeResumeBlock(2), event.stopPropagation(), scrollPage('.tags', '.contacts')">Инженер</a>
+            </h3>
+          </div>
+          <div class="description job">
+            Государственное учреждение "ОКРУЖНАЯ ГОСУДАРСТВЕННАЯ ТЕЛЕВИЗИОННАЯ И РАДИОВЕЩАТЕЛЬНАЯ КОМПАНИЯ
+            "ЯМАЛ-РЕГИОН",
+            в настоящее время автономная некоммерческая организация "ЯМАЛ-МЕДИА" - самый крупный медиахолдинг Ямала.
+          </div>
+        </div>
+
+        <div class="link">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/skynet.png"></div>
+            <div>
+              <div class="addressName">Интернет-провайдер</div>
+              <div class="adress">https://skynet.ru/o-kompanii/</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a onClick="changeResumeBlock(4), event.stopPropagation(), scrollPage('.tags', '.contacts')">Специалист
+                технической
+                поддержки</a>
+            </h3>
+          </div>
+          <div class="description job">
+            ООО «СкайНэт» предоставляет полный комплект телекоммуникационных услуг для дома и офиса. Телематические
+            услуги связи.
+          </div>
+        </div>
+
+        <div class="link">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/gto.svg"></div>
+            <div>
+              <div class="addressName">Спортивное учреждение</div>
+              <div class="adress">http://center.salekhardsport.ru/</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a onClick="changeResumeBlock(3), event.stopPropagation(), scrollPage('.tags', '.contacts')">Специалист
+                по связям с
+                общесвенностью</a>
+            </h3>
+          </div>
+          <div class="description job">
+            Освещение спортивных мероприятий в интернете и медиа. Организация фото и видео съемки.
+            Работа в графических редакторах.
+          </div>
+        </div>
+
+        <div class="link">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/study.png"></div>
+            <div>
+              <div class="addressName">Учебное</div>
+              <div class="adress">https://learn.javascript.ru</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a onClick="changeResumeBlock(5), event.stopPropagation(), scrollPage('.tags', '.contacts')">Технические
+                умения,
+                навыки</a>
+            </h3>
+          </div>
+          <div class="description skills">
+            Теоретические и практические навыки: ООП. WinForms, C#, JS.
+            <div>Техническая документация, курсы.</div>
+          </div>
+        </div>
+
+        <div class="link" onscroll="click">
+          <div class="link__header flex row">
+            <div class="logos flex center"><img src="./icons/company-icons/tg.png"></div>
+            <div>
+              <div class="addressName">Контакты</div>
+              <div class="adress">клик на Telegram для связи</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="titleLink">
+              <a href="https://t.me/xupokh">Telegram</a>
+            </h3>
+          </div>
+          <div class="description contacts">
+            Предпочитаемый способ связи. Спасибо за внимание!
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="resume-info flex column hidden">
+        <div class="flex center">
+          <img src="./photo/face.jpg">
+        </div>
+        <h2 class="title"> Походяева Ксения Александровна </h2>
+        <div class="description">
+          <h2 class="title">О себе:</h2>
+          <h3>ФИО:</h3>
+          <p>Походяева Ксения Александровна</p>
+          <h3>Дата рождения:</h3>
+          <p>28.12.1993</p>
+          <h3>Место жительства:</h3>
+          <p>Салехард, ЯНАО</p>
+          <p>Санкт-Петербург</p>
+          <h3>Семейное положение:</h3>
+          <p>не замужем</p>
+          <h3>Иностранные языки:</h3>
+          <p>английский</p>
+        </div>
+      </div>
+
+      <div class="resume-info flex column hidden">
+        <div class="flex center">
+          <img src="./photo/itmo.jpg">
+        </div>
+        <h2 class="title"> Университет ИТМО </h2>
+        <div class="description">
+          <h2 class="title"> Образование: </h2>
+          <h3>Учебное заведение:</h3>
+          <p>Санкт-Петербургский национальный исследовательский
+            университет информационных технологий, механики и оптики</p>
+          <h3>Город:</h3>
+          <p>Санкт-Петербург</p>
+          <h3> Факультет:</h3>
+          <p>Инфокоммуникацонных технологий </p>
+          <h3> Кафедра:</h3>
+          <p>Интеллектуальные системы связи </p>
+          <h3> Годы обучения:</h3>
+          <p>2011-2016</p>
+          <h3>Дополнительно:</h3>
+          <p>2012: Деловой английский язык. Курс дополнительного образования ИТМО.</p>
+          <p>2014: Python. Курс дополнительного образования ИТМО.</p>
+          <h3> Дипломная работа и практика:</h3>
+          <p>2015: Unit-тесты на предприятии. Практика.</p>
+          <p>2016: Проект биллинга телекоммуникационной-компании. Диплом.</p>
+        </div>
+      </div>
+
+      <div class="resume-info flex column hidden">
+        <picture>
+          <div class="flex center">
+            <img src="./images/yamal-media.png">
+          </div>
+        </picture>
+        <div class="title"> Инженер </div>
+        <div class="description">
+          <p>Салехард, ЯНАО. Сентябрь 2019 — настоящее время</p>
+          <h2 class="title">АНО "Ямал Медиа"</h2>
+          <p> Диагностика и решение сетевых проблем </p>
+          <p> Установка, настройка, ремонт и сопровождение компьютерного оборудования, в том числе локальных сетей </p>
+          <p> Поддержка технических средств и программного обеспечения‚ предотвращения сбоев в работе систем </p>
+          <p> Установка, настройка и обслуживание оргтехники </p>
+        </div>
+      </div>
+
+      <div class="resume-info flex column hidden">
+        <picture>
+          <div class="flex center">
+            <img src="./images/gto-logo.png" alt="GTO">
+          </div>
+        </picture>
+        <div class="title"> Специалист по связям с общественностью </div>
+        <div class="description">
+          <p>Салехард, ЯНАО. Июль — Сентябрь 2019</p>
+          <h2 class="title"> Центр тестирования всероссийского физкультурно-спортивного комплекса «ГТО» </h2>
+          <p class="name"> Администрирование социальных страниц и сайта</p>
+          <p class="name"> Визуальное оформление мероприятий и рекламы </p>
+          <p class="name"> Контакт с коммерческими организациями </p>
+        </div>
+      </div>
+
+      <div class="resume-info flex column hidden">
+        <div class="flex center">
+          <img src="./images/skynet-logo.svg" alt="SkyNet">
+        </div>
+        <div class="title"> Оператор технической поддержки </div>
+        <div class="description">
+          <p>Санкт-Петербург. Май 2014 — Май 2015 </p>
+          <h2 class="title"> ООО "СкайНэт" </h2>
+          <p> Диагностика и решение сетевых проблем </p>
+          <p> Техническая и программная поддержка пользователей </p>
+          <p> Решение конфликтных ситуаций </p>
+        </div>
+      </div>
+
+      <div class="resume-info flex column hidden">
+
+        <div class="flex center logo-panel">
+          <div class="tech-logo flex center" data-title="HTML">
+            <img src="./icons/tech-icons/html_icon.png" alt="HTML">
+          </div>
+
+          <div class="tech-logo flex center" data-title="CSS">
+            <img src="./icons/tech-icons/css_icon.png" alt="CSS">
+          </div>
+
+          <div class="tech-logo flex center" data-title="Java Script">
+            <img src="./icons/tech-icons/javascript_icon.png" alt="Java Script">
+          </div>
+
+          <div class="tech-logo flex center" data-title="TypeScript">
+            <img src="./icons/tech-icons/typescript_icon.png" alt="TypeScript">
+          </div>
+
+          <div class="tech-logo flex center" data-title="React">
+            <img src="./icons/tech-icons/react_icon.png" alt="React">
+          </div>
+
+        </div>
+
+        <div class="flex center logo-panel">
+          <div class="tech-logo flex center" data-title="node.js">
+            <img src="./icons/tech-icons/nodejs_icon.png" alt="node.js">
+          </div>
+
+          <div class="tech-logo flex center" data-title="Nest">
+            <img src="./icons/tech-icons/nestjs_icon.png" alt="Nest">
+          </div>
+
+          <div class="tech-logo flex center" data-title="VueJS">
+            <img src="./icons/tech-icons/vuejs_icon.png" alt="VueJS">
+          </div>
+
+          <div class="tech-logo flex center" data-title="webpack">
+            <img src="./icons/tech-icons/webpack_icon.png" alt="webpack">
+          </div>
+
+          <div class="tech-logo flex center" data-title="Postgres">
+            <img src="./icons/tech-icons/postgresql_icon.png" alt="Postgres">
+          </div>
+        </div>
+
+        <div class="flex center logo-panel">
+          <div class="tech-logo flex center" data-title="C#">
+            <img src="./icons/tech-icons/csharp_icon.png" alt="C#">
+          </div>
+
+          <div class="tech-logo flex center" data-title="mongoDB">
+            <img src="./icons/tech-icons/mongodb_icon.png" alt="mongoDB">
+          </div>
+
+          <div class="tech-logo flex center" data-title="Sass">
+            <img src="./icons/tech-icons/sass_icon.png" alt="Sass">
+          </div>
+
+          <div class="tech-logo flex center" data-title="WebGL">
+            <img src="./icons/tech-icons/webgl_icon.png" alt="WebGL">
+          </div>
+
+          <div class="tech-logo flex center" data-title="docker">
+            <img src="./icons/tech-icons/docker_icon.png" alt="docker">
+          </div>
+
+        </div>
+        <div class="description">
+          <p> *теоритические и практические знания </p>
+          <div class="title"> Навыки: </div>
+          <p> Создание и обработка визуальных материалов, ПО и WEB-страниц. </p>
+          <p> Технический английский. </p>
+          <p> Работоспособность. Стрессоустойчивость. </p>
+          </p>
+        </div>
       </div>
 
     </div>
-
-    <div class="spaceLogoTop"> 
-
-        <div class="logo">
-            <picture>
-              
-              
-              <img src="./icons/google.png">
-             </picture>
-        </div>
-     
-      </div>   
-
-        <div class="searchPanel">
-        <div class="searchBar">
-
-            <div style="display: flex; flex-direction: row; align-items: center;">
-
-              <a href="#"> <img class="searchIcon search"  src="./icons/search.svg" title="Search"></a>
-
-              <input class="searchInput" type="text" title="Search" value="">
-
-            </div>
-
-            <div style="display: flex; flex-direction: row;">
-
-             <div><a href="#"> <img class="searchIcon search"  src="./icons/keyboard.png" title="Keyboard"></a></div>
-        
-             <div> <a href="#"> <img class="searchIcon" src="./icons/mic.png" title="Search by Voice"></a></div>
-          
-             <div> <a href="#"> <img class="searchIcon" src="./icons/photo.svg" title="Search by Photo"></a></div>
-
-            </div>
-        </div>
-
-          <div class="buttons">
-
-            <button class="button" type="button">Поиск в Google</button>
-  
-            <button class="button" type="button">Мне повезёт!</button>
-      
-        </div>
-      </div>
-
-        <div class="bottomSpace">  </div>
-        <div class="bottomBar"> 
-          <a >Россия</a>
-        </div>
-        <div class="bottomBar"> 
-          <div class="bottomLinks">
-          <a >Всё о Google</a>
-          <a >Реклама</a>
-          <a >Для бизнеса</a>
-          <a >Как работает Google Поиск</a>
-        </div>
-        <div class="bottomLinks">
-          
-          <a > <img src="./logos/leaf.png"> Наше третье десятилетие борьбы c незаконным копированием кода</a>
-        </div>
-        <div class="bottomLinks">
-          <a >Конфиденциальность</a>
-          <a >Условия</a>
-          <a >Настройки</a>
-        </div>
-        </div>
-
   </section>
-<section>
-  <button> test</button>
-</section>
 
-<script src="./main.js"></script>
+  <script src="./index.js"></script>
+
 </body>
 
 </html>
