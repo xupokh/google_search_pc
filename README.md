@@ -1,2 +1,2 @@
-# google_search_pc
-google search PC version (no media)
+# google_search_resume
+my resume fantasy version
