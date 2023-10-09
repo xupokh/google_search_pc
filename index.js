@@ -91,6 +91,6 @@ function enterSearchQuery(inputContent) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const inputContent = "Походяева Ксения";
+  const inputContent = "Ксения Походяева резюме";
   enterSearchQuery(inputContent);
 });
